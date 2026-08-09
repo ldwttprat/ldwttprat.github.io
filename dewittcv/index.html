@@ -32,6 +32,17 @@ strong{ font-weight:700; }
 a{ color:var(--accent); text-decoration:underline; text-decoration-color:var(--accent-soft); text-underline-offset:2px; }
 a:hover{ text-decoration-color:var(--accent); }
 a:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+.site-head{border-bottom:1px solid var(--rule)}
+.site-head .shell{max-width:74rem;margin:0 auto;padding:22px 24px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 28px}
+.wordmark{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.98rem;color:var(--ink);text-decoration:none}
+.site-nav{display:flex;flex-wrap:wrap;gap:4px 20px}
+.site-nav a{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:500;font-size:.82rem;color:var(--ink);text-decoration:none}
+.site-nav a:hover{color:var(--accent)}
+.site-nav a[aria-current]{color:var(--accent);font-weight:600;box-shadow:0 2px 0 var(--accent)}
+.cv-actions{margin:1rem 0 0}
+.cv-actions a.btn{display:inline-block;font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);padding:.55rem 1.1rem;text-decoration:none}
+.cv-actions a.btn:hover{background:var(--accent);color:var(--bg)}
 footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--rule);
   font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif; font-size:.72rem; color:var(--muted);
   letter-spacing:.06em; text-transform:uppercase; }
@@ -41,7 +52,7 @@ footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--ru
   @page{ size: letter; margin: 20mm 19mm; }
   body{ font-size:10.2pt; line-height:1.42; }
   .wrap{ max-width:none; padding:0; }
-  nav.toc{ display:none; }
+  nav.toc, .site-head, .cv-actions{ display:none; }
   a{ color:var(--ink); text-decoration:none; }
   h2{ break-after:avoid; margin-top:1.1rem; }
   h3{ break-after:avoid; }
@@ -51,12 +62,29 @@ footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--ru
 </style>
 </head>
 <body>
+<header class="site-head">
+<div class="shell">
+<a class="wordmark" href="/">Lindsey DeWitt Prat, PhD</a>
+<nav class="site-nav" aria-label="Site">
+<a href="/bio/">Bio</a>
+<a href="/dewittcv/" aria-current="page">CV</a>
+<a href="/povs/">POVs</a>
+<a href="/academic-research/">Academia</a>
+<a href="/speaking/">Speaking</a>
+<a href="/translation/">Translation</a>
+<a href="/teaching/">Teaching</a>
+<a href="/press/">Press</a>
+</nav>
+</div>
+</header>
 <div class="wrap">
 <header class="masthead">
 <h1>Lindsey DeWitt Prat <span class="cred">PhD</span></h1>
 <p class="contact">lindsey.dewittprat@gmail.com | <a href="https://www.lindseydewittprat.com/">lindseydewittprat.com</a> | +33 (0)670 83 56 43</p>
 <p class="contact">ORCID: <a href="https://orcid.org/0000-0001-9713-4766">0000-0001-9713-4766</a></p>
-<nav class="toc" aria-label="Sections"><a href="#current-positions">Positions</a><a href="#peer-reviewed-publications">Publications</a><a href="#other-publications">Other Writing</a><a href="#awards">Awards</a><a href="#research-leadership">Research Leadership</a><a href="#conferences-organized">Conferences Organized</a><a href="#speaking-engagements">Speaking</a><a href="#education">Education</a><a href="#academic-employment">Academic Employment</a><a href="#invited-academic-lectures">Invited Lectures</a><a href="#invited-workshops">Workshops &amp; Forums</a><a href="#panels-organized">Panels Organized</a><a href="#refereed-presentations">Conference Papers</a><a href="#academic-outreach">Outreach</a><a href="#teaching">Teaching</a><a href="#scholarships-fellowships">Fellowships</a><a href="#grants">Grants</a><a href="#professional-training">Professional Training</a><a href="#in-the-media">Media</a><a href="#languages">Languages</a><a href="#memberships">Memberships</a></nav></header>
+<nav class="toc" aria-label="Sections"><a href="#current-positions">Positions</a><a href="#peer-reviewed-publications">Publications</a><a href="#other-publications">Other Writing</a><a href="#awards">Awards</a><a href="#research-leadership">Research Leadership</a><a href="#conferences-organized">Conferences Organized</a><a href="#speaking-engagements">Speaking</a><a href="#education">Education</a><a href="#academic-employment">Academic Employment</a><a href="#invited-academic-lectures">Invited Lectures</a><a href="#invited-workshops">Workshops &amp; Forums</a><a href="#panels-organized">Panels Organized</a><a href="#refereed-presentations">Conference Papers</a><a href="#academic-outreach">Outreach</a><a href="#teaching">Teaching</a><a href="#scholarships-fellowships">Fellowships</a><a href="#grants">Grants</a><a href="#professional-training">Professional Training</a><a href="#in-the-media">Media</a><a href="#languages">Languages</a><a href="#memberships">Memberships</a></nav>
+<p class="cv-actions"><a class="btn" href="/assets/docs/LDPrat_CV.pdf" download>Download PDF</a></p>
+</header>
 <section id="current-positions"><h2>CURRENT POSITIONS</h2>
 <p class="item"><strong>2022–</strong> Director of Research, Bold Insight, Chicago, USA (based in Paris, France). Design and lead global research and strategy programs at the intersection of AI and global languages and cultures. 100+ researchers, Fortune 10 clients.</p>
 <p class="item"><strong>2014–</strong> Translator (Japanese–English), Self-employed, Paris, France. Selected clients: Mori Building Co., Ltd, Wakuden Group, Toyota, Osaka World Expo 2025 (NTT), Muji; Government of Japan; Nara Prefecture.</p>
@@ -66,26 +94,26 @@ footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--ru
 <p class="item"><strong>(under review)</strong> DeWitt Prat, Lindsey; Hall, Siobhan MacKenzie; Heldreth, Courtney; Wornyo, Edem; Martin Jr., Donald; Denton, Remi. “Understanding AI Data Production &amp; Community Impacts Worldwide: A Multivocal Literature Review.” <em>ACM Journal on Responsible Computing</em>.</p>
 <p class="item"><strong>(in press)</strong> DeWitt Prat, Lindsey; Turki, Aymen. “Beyond Access: The ‘Scale Wall’ and the Exhaustion of the Fintech Advantage for Women Leaders in the Global Majority” [working title]. In <em>Financial Inclusion in the Digital Age: Navigating Innovation and Inequality in the Global South</em>, ed. Shame Mugova, Simeon Babatunde, and Adeola Oyebowale. Sustainable Finance Book Series, Springer Nature.</p>
 <p class="item"><strong>(in press)</strong> “Sacred Battlegrounds: Manufacturing Tradition and Gender Exclusion in Japanese Sumo.” <em>Japanese Journal of Religious Studies.</em></p>
-<p class="item"><strong>2025</strong> “<a href="https://anthrosource.onlinelibrary.wiley.com/doi/pdf/10.1111/epic.70006">From Chaos to Innovation: Understanding Products and People in a Non-Deterministic World</a>.” <em>Ethnographic Praxis in Industry Conference Proceedings</em>, 2025.</p>
-<p class="item"><strong>2025</strong> “Confraternities.” In <a href="https://uhpress.hawaii.edu/title/the-new-nanzan-guide-to-japanese-religions/"><em>The New Nanzan Guide to Japanese Religions</em></a>, ed. Jolyon B. Thomas and Matthew D. McMullen. Nanzan Library of Asian Religion and Culture; University of Hawai’i Press.</p>
-<p class="item"><strong>2024</strong> “<a href="https://anthrosource.onlinelibrary.wiley.com/doi/10.1111/epic.12196">Decolonizing LLMs: An Ethnographic Framework for AI in African Contexts.”</a> <em>Ethnographic Praxis in Industry Conference Proceedings. </em>Winner, UXalliance Most Impactful Project Award (2025); featured at the AI for Developing Countries Forum 2025 Winter Summit at the United Nations in Geneva.</p>
-<p class="item"><strong>2021</strong> “<a href="https://doi.org/10.3390/rel12090749">Japan’s Sacred Sumo and the Exclusion of Women: The Olympic Male Sumo Wrestler (Part 1)</a>.” <em>Religions </em>12/9, 749.</p>
-<p class="item"><strong>2021</strong> “<a href="http://dx.doi.org/10.5040/9781350043763.ch-003">Cultural Heritage</a>.” In <em>The Bloomsbury Handbook of Japanese Religions</em>, ed. Erica Baffelli, Andrea Castiglioni, and Fabio Rambelli, 19–25. Bloomsbury Academic.</p>
-<p class="item"><strong>2020</strong> “<a href="https://doi.org/10.4324/9780429265976-4">World Cultural Heritage and Women’s Exclusion from Sacred Sites in Japan</a>.” In <em>Sacred Heritage in Japan</em>, ed. Aike P. Rots and Mark Teeuwen, 65–86. Routledge.</p>
-<p class="item"><strong>2019</strong> “<a href="https://doi.org/10.1093/OBO/9780195393521-0258">Mountain Buddhism in East Asia</a>.” <em>Oxford Bibliographies in “Buddhism,”</em> ed. Richard K. Payne. Oxford University Press. January 15.</p>
-<p class="item"><strong>2018</strong> “<a href="http://dx.doi.org/10.5040/9781350062887.ch-004">Island of Many Names, Island of No Name: Taboo and the Mysteries of Okinoshima</a>." In <em>The Sea and the Sacred in Japan: Aspects of Maritime Religion</em>, ed. Fabio Rambelli, 39–50. Bloomsbury Academic.</p>
-<p class="item"><strong>2018</strong> “<a href="https://doi.org/10.5109/1924413">Report on the 2017 Inscription of ‘Sacred Island of Okinoshima and Associated Sites in the Munakata Region’ as a UNESCO World Heritage Site</a>.” <em>Journal of Asian Humanities at Kyushu University (JAH-Q)</em> 3: 135–140.</p>
-<p class="item"><strong>2017</strong> “<a href="http://dx.doi.org/10.18874/jjrs.44.2.2017.309-316">Mountain Mandalas: Shugendo in Kyushu</a>.” <em>Japanese Journal of Religious Studies</em> 44/2: 309–316.</p>
-<p class="item"><strong>2016</strong> “<a href="https://doi.org/10.5109/1654566">Envisioning and Observing Women’s Exclusion from Sacred Mountains in Japan</a>.” <em>Journal of Asian Humanities at Kyushu University (JAH-Q)</em> 1: 19–28.</p>
+<p class="item"><strong>2025</strong> Johnson, Katie; Becker, Larry; DeWitt Prat, Lindsey; Goel, Megha; Lew, Gavin. “From Chaos to Innovation: Understanding Products and People in a Non-Deterministic World.” <em>Ethnographic Praxis in Industry Conference Proceedings</em> 2025 (1): 205–222. <a href="https://doi.org/10.1111/epic.70006">https://doi.org/10.1111/epic.70006</a></p>
+<p class="item"><strong>2025</strong> “Confraternities.” In <em>The New Nanzan Guide to Japanese Religions</em>, ed. Jolyon B. Thomas and Matthew D. McMullen, 293–306. Nanzan Library of Asian Religion and Culture; University of Hawai‘i Press. <a href="https://doi.org/10.1515/9798880701346-023">https://doi.org/10.1515/9798880701346-023</a></p>
+<p class="item"><strong>2024</strong> DeWitt Prat, Lindsey; Ndlovu Lucas, Olivia Nercy; Golias, Christopher; Lewis, Mia. “Decolonizing LLMs: An Ethnographic Framework for AI in African Contexts.” <em>Ethnographic Praxis in Industry Conference Proceedings</em> 2024 (1): 46–85. <a href="https://doi.org/10.1111/epic.12196">https://doi.org/10.1111/epic.12196</a> Winner, UXalliance Most Impactful Project Award (2025); featured at the AI for Developing Countries Forum 2025 Winter Summit at the United Nations in Geneva.</p>
+<p class="item"><strong>2021</strong> “<a href="https://doi.org/10.3390/rel12090749">Japan’s Sacred Sumo and the Exclusion of Women: The Olympic Male Sumo Wrestler (Part 1)</a>.” <em>Religions </em>12/9, 749. <a href="https://doi.org/10.3390/rel12090749">https://doi.org/10.3390/rel12090749</a></p>
+<p class="item"><strong>2021</strong> “Cultural Heritage.” In <em>The Bloomsbury Handbook of Japanese Religions</em>, ed. Erica Baffelli, Andrea Castiglioni, and Fabio Rambelli, 19–26. Bloomsbury Academic. <a href="https://doi.org/10.5040/9781350043763.ch-003">https://doi.org/10.5040/9781350043763.ch-003</a></p>
+<p class="item"><strong>2020</strong> “<a href="https://doi.org/10.4324/9780429265976-4">World Cultural Heritage and Women’s Exclusion from Sacred Sites in Japan</a>.” In <em>Sacred Heritage in Japan</em>, ed. Aike P. Rots and Mark Teeuwen, 65–86. Routledge. <a href="https://doi.org/10.4324/9780429265976-4">https://doi.org/10.4324/9780429265976-4</a></p>
+<p class="item"><strong>2019</strong> “<a href="https://doi.org/10.1093/OBO/9780195393521-0258">Mountain Buddhism in East Asia</a>.” <em>Oxford Bibliographies in “Buddhism,”</em> ed. Richard K. Payne. Oxford University Press. January 15. <a href="https://doi.org/10.1093/obo/9780195393521-0258">https://doi.org/10.1093/obo/9780195393521-0258</a></p>
+<p class="item"><strong>2018</strong> “<a href="http://dx.doi.org/10.5040/9781350062887.ch-004">Island of Many Names, Island of No Name: Taboo and the Mysteries of Okinoshima</a>.” In <em>The Sea and the Sacred in Japan: Aspects of Maritime Religion</em>, ed. Fabio Rambelli, 39–50. Bloomsbury Academic. <a href="https://doi.org/10.5040/9781350062887.ch-004">https://doi.org/10.5040/9781350062887.ch-004</a></p>
+<p class="item"><strong>2018</strong> “<a href="https://doi.org/10.5109/1924413">Report on the 2017 Inscription of ‘Sacred Island of Okinoshima and Associated Sites in the Munakata Region’ as a UNESCO World Heritage Site</a>.” <em>Journal of Asian Humanities at Kyushu University (JAH-Q)</em> 3: 135–140. <a href="https://doi.org/10.5109/1924413">https://doi.org/10.5109/1924413</a></p>
+<p class="item"><strong>2017</strong> “Shugendo and Kyushu.” Review essay on Allan G. Grapard, <em>Mountain Mandalas: Shugendō in Kyushu</em>. <em>Japanese Journal of Religious Studies</em> 44/2: 309–316. <a href="https://doi.org/10.18874/jjrs.44.2.2017.309-316">https://doi.org/10.18874/jjrs.44.2.2017.309-316</a></p>
+<p class="item"><strong>2016</strong> “<a href="https://doi.org/10.5109/1654566">Envisioning and Observing Women’s Exclusion from Sacred Mountains in Japan</a>.” <em>Journal of Asian Humanities at Kyushu University (JAH-Q)</em> 1: 19–28. <a href="https://doi.org/10.5109/1654566">https://doi.org/10.5109/1654566</a></p>
 <p class="item"><strong>2013</strong> “<a href="https://www.jstor.org/stable/44362572">Review of Passing the Light: The Incense Light Community and Buddhist Nuns in Contemporary Taiwan by Chün-Fang Yü</a>.” <em>The Eastern Buddhist</em> 44/2: 145–150.</p>
 <h3>Monographs</h3>
-<p class="item"><strong>2026</strong> Aike P. Rots, Florence Durney, Lindsey DeWitt Prat, and Sonja Åman, eds. <a href="https://uhpress.hawaii.edu/title/water-powers-sacred-aquatic-animals-of-the-asia-pacific/"><em>Water Powers: Sacred Aquatic Animals of the Asia-Pacific</em></a>. University of Hawaii Press.</p>
+<p class="item"><strong>2026</strong> Aike P. Rots, Florence Durney, Lindsey DeWitt Prat, and Sonja Åman, eds. <em>Water Powers: Sacred Aquatic Animals of the Asia-Pacific</em>. University of Hawai‘i Press. <a href="https://doi.org/10.1515/9798880703142">https://doi.org/10.1515/9798880703142</a></p>
 <h3>Translations (Japanese to English)</h3>
 <p class="item"><strong>(translation in progress)</strong> Miyake Yōichirō, “Chapter 2,” from <em>Jinkō chinō no tame no tetsugakujuku: Tōyō tetsugaku hen </em><a href="https://bnn.co.jp/products/9784802510806">人工知能のための哲学塾 東洋哲学篇</a> [Philosophy for Artificial Intelligence: Eastern Philosophy Edition]. BNN, 2018. Collaborative translation with the author.</p>
 <p class="item"><strong>2022</strong> Andō Reiji, “<a href="https://www.jstor.org/stable/10.2307/48731581">Reading D. T. Suzuki Anew</a>.” <em>The Eastern Buddhist</em> 2/1: 17–34.</p>
-<p class="item"><strong>2020</strong> Niki Natsumi, “<a href="http://dx.doi.org/10.5040/9781350179424.ch-008">The Description of Mountains in the Minoodera engi</a>.” In <em>Defining Shugendō: Critical Studies on Japanese Mountain Religion</em>, ed. Andrea Castiglioni, Fabio Rambelli, and Carina Roth, 145–153. Bloomsbury Academic. With Carina Roth.</p>
-<p class="item"><strong>2019</strong> Igata Susumu, “<a href="https://doi.org/10.5109/2231636">Demon Roof Tiles: A Study of the Dazaifu Type Onigawara Style I-A</a>.” <em>Journal of Asian Humanities at Kyushu University (JAH-Q)</em> 4: 109–125. Adapted translation with Cynthea J. Bogel.</p>
-<p class="item"><strong>2018</strong> Satō Masato, “<a href="http://dx.doi.org/10.5040/9781350062887.ch-002">The Sea and Food Offerings for the Kami (shinsen)</a>.” In <em>The Sea and the Sacred in Japan: Aspects of Maritime Religiosity</em>, ed. Fabio Rambelli, 15–22. Bloomsbury Academic.</p>
+<p class="item"><strong>2020</strong> Niki Natsumi, “<a href="http://dx.doi.org/10.5040/9781350179424.ch-008">The Description of Mountains in the Minoodera engi</a>.” In <em>Defining Shugendō: Critical Studies on Japanese Mountain Religion</em>, ed. Andrea Castiglioni, Fabio Rambelli, and Carina Roth, 145–153. Bloomsbury Academic. With Carina Roth. <a href="https://doi.org/10.5040/9781350179424.ch-008">https://doi.org/10.5040/9781350179424.ch-008</a></p>
+<p class="item"><strong>2019</strong> Igata Susumu, “<a href="https://doi.org/10.5109/2231636">Demon Roof Tiles: A Study of the Dazaifu Type Onigawara Style I-A</a>.” <em>Journal of Asian Humanities at Kyushu University (JAH-Q)</em> 4: 109–125. Adapted translation with Cynthea J. Bogel. <a href="https://doi.org/10.5109/2231636">https://doi.org/10.5109/2231636</a></p>
+<p class="item"><strong>2018</strong> Satō Masato, “<a href="http://dx.doi.org/10.5040/9781350062887.ch-002">The Sea and Food Offerings for the Kami (shinsen)</a>.” In <em>The Sea and the Sacred in Japan: Aspects of Maritime Religiosity</em>, ed. Fabio Rambelli, 15–22. Bloomsbury Academic. <a href="https://doi.org/10.5040/9781350062887.ch-002">https://doi.org/10.5040/9781350062887.ch-002</a></p>
 <p class="item"><strong>2018</strong> Kadoya Atsushi, “On a Kami Image in the <em>Reikiki </em>‘Shintaizu’ Section.” <em>Japanese Religions </em>42/1–2 (special issue “Facets of ‘Shinto’ in the Muromachi Period,” guest editor Fabio Rambelli): 69–86.</p>
 <p class="item"><strong>2018</strong> Itō Satoshi, “‘Shintō’ in the Muromachi Period.” <em>Japanese Religions </em>42/1–2: 9–24.</p>
 <p class="item"><strong>2018</strong> Uejima Susumu, “Kami and Buddhism in the Nō <em>Miwa</em>: Rethinking the Study of the Amalgamation of Kami and Buddhas (<em>shinbutsu shūgō</em>).” <em>Japanese Religions </em>42/1–2: 25–38.</p>
@@ -93,9 +121,9 @@ footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--ru
 <section id="other-publications"><h2>OTHER PUBLICATIONS (RECENT SELECTED)</h2>
 <p class="item"><strong>2026</strong> “<a href="https://lindseydewittprat.substack.com/p/philosophy-ai-what-is-it-where-is">Philosophy × AI: What Is It, Where Is It, Whose Is It?</a>.” Substack, June 5.</p>
 <p class="item"><strong>2026</strong> “<a href="https://www.theresearchopsreview.com/p/a-blueprint-for-evaluating-ai-across-the-research-pipeline">Winning the Game of Broken Telephone: A Blueprint for Evaluating AI Across the Research Pipeline</a>.” <em>The ResearchOps Review</em>, May 6.</p>
-<p class="item"><strong>2026</strong> “<a href="https://doi.org/10.1145/3803847">What Are You Reading? Lindsey DeWitt Prat</a>.” ACM <em>Interactions</em> 33(3): 14–15.</p>
+<p class="item"><strong>2026</strong> “<a href="https://doi.org/10.1145/3803847">What Are You Reading? Lindsey DeWitt Prat</a>.” ACM <em>Interactions</em> 33(3): 14–15. <a href="https://doi.org/10.1145/3803847">https://doi.org/10.1145/3803847</a></p>
 <p class="item"><strong>2026</strong> “<a href="https://lindseydewittprat.substack.com/p/the-goldilocks-koan-why-there-are">The Goldilocks Kōan: Why There Are No ‘Just Right’ Names for AI</a>.” Substack, January 25.</p>
-<p class="item"><strong>2026</strong> “<a href="https://lindseydewittprat.substack.com/p/the-research-risk-cascade-why-even">The Research Risk Cascade: Why Even '90% Accurate' AI Tools Break Pipelines</a>.” Substack, January 2.</p>
+<p class="item"><strong>2026</strong> “<a href="https://lindseydewittprat.substack.com/p/the-research-risk-cascade-why-even">The Research Risk Cascade: Why Even ‘90% Accurate’ AI Tools Break Pipelines</a>.” Substack, January 2.</p>
 <p class="item"><strong>2025</strong> “<a href="https://anthrosource.onlinelibrary.wiley.com/doi/full/10.1111/epic.70011">Interactive AI and Cultural Complexity</a>” (with Anna Metsäranta). Salon Report, <em>Ethnographic Praxis in Industry Conference </em>Proceedings, 2025. <a href="https://doi.org/10.1111/epic.70011">https://doi.org/10.1111/epic.70011</a></p>
 <p class="item"><strong>2025</strong> “<a href="https://boldinsight.com/insights/blog/word-processing-vs-world-processing-the-cultural-work-ai-cant-do">Word Processing vs. World Processing: The Cultural Work AI Can’t Do</a>.” Bold Insight Blog.</p>
 <p class="item"><strong>2025</strong> “<a href="https://boldinsight.com/insights/blog/mind-the-ai-gap-the-ux-researchers-role-in-navigating-the-ai-divide">Mind the AI Gap: The UX Researcher’s Role in Navigating the AI Divide</a>.” Bold Insight Blog.</p>
@@ -193,7 +221,7 @@ footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--ru
 <section id="panels-organized"><h2>PANELS AND ROUNDTABLES ORGANIZED</h2>
 <p class="item"><strong>2021</strong> Panel: “<a href="https://nomadit.co.uk/conference/eajs2021/p/9124">Inclusion and Exclusion in (the Study of) Japanese Religions</a>.” European Association for Japanese Studies (EAJS). University of Ghent. Co-organized with Aike Rots. August 26 (digital format).</p>
 <p class="item"><strong>2018</strong> Panel: “Creating and Contesting Sacred Heritage in Asia.” <a href="https://asianstudies-kyushu.com/wp-content/uploads/2018/09/Sept.-22-day-2-all-panel-abstracts-NEWEST.pdf">“New Terrains in Asian Humanities”</a> (Ajia ni okeru hito no idō to jinbungakuteki hen’yō アジアにおける人の移動と人文学的変容). International three-day conference, Kyushu University’s World Premier International Researcher Invitation Program (“Progress 100”). September 21–23.</p>
-<p class="item"><strong>2017</strong> Panel: "‘According to Tradition’: (Re)Imagining Religion in Modern Japan." Annual meeting of the Association for Asian Studies (AAS). Toronto, Canada. March 14. Co-organized with Ellen Van Goethem.</p>
+<p class="item"><strong>2017</strong> Panel: “‘According to Tradition’: (Re)Imagining Religion in Modern Japan.” Annual meeting of the Association for Asian Studies (AAS). Toronto, Canada. March 14. Co-organized with Ellen Van Goethem.</p>
 <p class="item"><strong>2016</strong> Roundtable: “The Munakata Shrine, Ōshima and Okinoshima” (with Brian Ruppert, Fabio Rambelli, D. Max Moerman). International conference “Fourth IMAP Symposium: Religion and Imagination in Japanese Contexts.” Kyushu University. December 7.</p>
 </section>
 <section id="refereed-presentations"><h2>REFEREED CONFERENCE PRESENTATIONS (Selected)</h2>
@@ -229,7 +257,7 @@ footer.updated{ margin-top:3rem; padding-top:1rem; border-top:1px solid var(--ru
 <p class="item"><strong>Fall 2017</strong> <a href="https://www.researchgate.net/publication/321849609_Einladung_zum_Gastvortrag_Entering_the_Peaks_The_Visual_Culture_of_Shugendo">Entering the Peaks: The Visual Culture of Shugendō</a>. Division of East Asian Art History, Art History Institute, Department of History and Cultural Studies (guest lecturer)</p>
 <h3>University of Tokyo</h3>
 <p class="item"><strong>Spring 2017</strong> Mt. Fuji, Sacred Space, Pilgrimage, Gender. “Rediscovery of Japan: The Nature, Culture, and History of Mt. Fuji” thematic course for “Global Praxis” UTokyo/ANU exchange (instructor of record, self-designed)</p>
-<p class="item"><strong>Spring 2016</strong> <a href="https://prezi.com/ylm9_yvhmi1i/mt-fuji/">Mt. Fuji, Pilgrimage, Gender</a>. "<a href="https://www.globalkomaba.c.u-tokyo.ac.jp/en/albums/abm.php?f=abm00016923.pdf&amp;amp;n=Pre-seminar+UTokyo.pdf">Rediscovery of Japan: The Nature, Culture, and History of Mt. Fuji</a>" thematic course for “Global Praxis” UTokyo/ANU exchange (instructor of record, self-designed)</p>
+<p class="item"><strong>Spring 2016</strong> <a href="https://prezi.com/ylm9_yvhmi1i/mt-fuji/">Mt. Fuji, Pilgrimage, Gender</a>. “<a href="https://www.globalkomaba.c.u-tokyo.ac.jp/en/albums/abm.php?f=abm00016923.pdf&amp;amp;n=Pre-seminar+UTokyo.pdf">Rediscovery of Japan: The Nature, Culture, and History of Mt. Fuji</a>” thematic course for “Global Praxis” UTokyo/ANU exchange (instructor of record, self-designed)</p>
 <h3>Kyushu University (IMAP in Japanese Humanities)</h3>
 <p class="item"><strong>Fall 2018</strong> Sacred Heritage in Japan and Beyond (instructor of record, self-designed)</p>
 <p class="item"><strong>Fall 2017</strong> Material Culture of Okinoshima and the Munakata Shrine and Relationship to East Asia, 4th to 9th century (guest lecturer)</p>

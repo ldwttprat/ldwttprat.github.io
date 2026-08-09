@@ -6,6 +6,9 @@
 <title>Lindsey DeWitt Prat, PhD</title>
 <meta name="description" content="Research and translation across languages, cultures, and technology.">
 <link rel="icon" href="/assets/img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#FCFBF8;
@@ -15,23 +18,26 @@
   --line:#DDD7CC;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Charter,'Bitstream Charter','Iowan Old Style',Georgia,'Hiragino Mincho ProN','Yu Mincho',serif;font-size:16.5px;line-height:1.8;display:flex;flex-direction:column;min-height:100vh}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Charter,'Iowan Old Style',Georgia,serif;font-size:16.5px;line-height:1.8;display:flex;flex-direction:column;min-height:100svh}
 a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.shell{max-width:1140px;margin:0 auto;padding:0 24px;width:100%}
-.site-head{border-bottom:1px solid var(--line)}
+.shell{max-width:1220px;margin:0 auto;padding:0 24px;width:100%}
+.site-head{position:relative;z-index:2}
 .site-head .shell{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 28px;padding-top:26px;padding-bottom:22px}
-.wordmark{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);text-decoration:none}
-.site-nav{display:flex;flex-wrap:wrap;gap:4px 22px}
-.site-nav a{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:500;font-size:.86rem;color:var(--ink);text-decoration:none;padding:2px 0}
+.wordmark{font-family:'Archivo',sans-serif;font-weight:600;font-size:.98rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.site-nav{display:flex;flex-wrap:wrap;gap:4px 20px}
+.site-nav a{font-family:'Archivo',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.04em;color:var(--ink);text-decoration:none}
 .site-nav a:hover{color:var(--accent)}
-main{flex:1;display:flex;align-items:center}
-.hero{padding:96px 0 120px}
-h1{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.015em;line-height:1.12;margin:0 0 20px;text-wrap:balance}
-.tagline{font-size:1.25rem;color:var(--muted);max-width:34ch;margin:0 0 34px}
-.cta{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.95rem}
-.site-foot{border-top:1px solid var(--line)}
-.site-foot .shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-top:26px;padding-bottom:34px;font-size:.84rem;color:var(--muted)}
+main{flex:1;display:flex;position:relative}
+main::before{content:'';position:absolute;inset:0;background:url('/assets/img/bio-ominesan.jpg') center 58%/cover no-repeat;opacity:.16;filter:saturate(.55)}
+.cover{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding-top:60px;padding-bottom:110px}
+.kicker{font-family:'Archivo',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 26px}
+h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.6rem,8.2vw,6.4rem);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;margin:0 0 10px;max-width:12ch}
+h1 .cred{display:block;font-weight:600;font-size:clamp(.9rem,1.6vw,1.15rem);letter-spacing:.22em;margin-top:14px;color:var(--muted)}
+.script{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.35rem,2.8vw,2rem);line-height:1.45;color:var(--ink);max-width:24em;margin:26px 0 0;letter-spacing:.01em}
+.cta{font-family:'Source Serif 4',Georgia,serif;font-weight:400;font-size:1.08rem;margin:38px 0 0}
+.site-foot{position:relative;z-index:2;border-top:1px solid var(--line)}
+.site-foot .shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-top:24px;padding-bottom:30px;font-size:.84rem;color:var(--muted);font-family:'Archivo',sans-serif}
 .site-foot a{color:var(--muted)}
 </style>
 </head>
@@ -54,9 +60,10 @@ h1{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-
 </header>
 
 <main>
-  <div class="shell hero">
-    <h1>Lindsey DeWitt Prat, PhD</h1>
-    <p class="tagline">Research and translation across languages, cultures, and technology</p>
+  <div class="shell cover">
+    <p class="kicker">Research &middot; Translation &middot; Interpretation</p>
+    <h1>Lindsey DeWitt&nbsp;Prat<span class="cred">PhD &middot; Paris</span></h1>
+    <p class="script">Research and translation across languages, cultures, and technology</p>
     <p class="cta"><a href="https://lindseydewittprat.substack.com/">Read my recent writing &rarr;</a></p>
   </div>
 </main>
