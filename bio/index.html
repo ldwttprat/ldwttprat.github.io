@@ -42,11 +42,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .story-stack{font-size:0}
 .stack-img{width:100%;display:block}
 .map-wrap{position:relative;font-size:16.5px}
-.map-wrap .txt,.story-stack .txt{max-width:600px;background:rgba(252,251,248,.93);padding:34px 38px;box-shadow:0 2px 24px rgba(33,30,26,.12);font-size:16.5px;line-height:1.8}
+.map-wrap .txt,.story-stack .txt{max-width:600px;background:rgba(252,251,248,.93);padding:30px 34px;box-shadow:0 2px 24px rgba(33,30,26,.12);font-size:16.5px;line-height:1.8}
 .story-stack .txt p{margin:0}
-.bridge{position:absolute;top:0;left:24px;right:24px;margin:0 auto;transform:translateY(-52%);z-index:2}
-.second{position:absolute;bottom:clamp(16px,6vh,60px);right:clamp(16px,7vw,110px);left:24px;margin-left:auto;z-index:2}
-@media (max-width:720px){.bridge{position:static;transform:none;margin:-60px 16px 14px}.second{position:static;margin:14px 16px 0 auto}}
+.hero-wrap{position:relative}
+.story-card{position:absolute;left:clamp(20px,6vw,90px);top:12%;max-width:520px}
+.second{position:absolute;right:4%;bottom:6%;max-width:520px}
+@media (max-width:860px){.story-card,.second{position:static;margin:0}.map-wrap .txt,.story-stack .txt{max-width:none}}
 /* places band */
 .places-band{position:relative;padding:64px 24px}
 .places-band::before{content:'';position:absolute;inset:0;background:url('/assets/img/bamboo.jpg') center/cover;opacity:.16;filter:saturate(.6)}
@@ -58,13 +59,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .paper-text .txt{max-width:620px}
 .paper-text .txt p{margin:0 0 1.5em}
 .paper-text .txt p:last-child{margin-bottom:0}
-/* favorites — spatial inverse of the places */
-.favorites{position:relative;padding:64px 24px 76px}
-.favorites::before{content:'';position:absolute;inset:0;background:url('/assets/img/bamboo.jpg') center/cover;opacity:.16;filter:saturate(.6)}
-.fav-inner{position:relative;max-width:660px;margin:0 auto;text-align:right}
-.fav-lead{font-size:1.02rem;margin:0 0 34px}
-.favorites p{margin:0 0 16px}
-.fav-inner p[style]{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:1.3rem;line-height:1.6;padding-right:calc(var(--i)*clamp(10px,3vw,34px))}
+/* favorites card on the Paris image */
+.overlay-left{justify-content:flex-start;padding-left:clamp(24px,7vw,110px)}
+.fav-card{max-width:300px;text-align:right}
+.fav-lead{font-size:.92rem;margin:0 0 18px}
+.fav-card .fav{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:1.06rem;line-height:1.55;margin:0 0 10px;padding-right:calc(var(--i)*clamp(4px,1vw,12px))}
+.fav-card .fav:last-child{margin-bottom:0}
 /* footer */
 .site-foot{border-top:1px solid #DDD7CC}
 .site-foot .shell{max-width:1220px;margin:0 auto;padding:26px 24px 34px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:.84rem;color:var(--muted)}
@@ -94,9 +94,11 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 </header>
 
 <section class="story-stack">
-  <img class="stack-img" src="/assets/img/bio-hero.jpg" alt="Black-and-white photograph of a girl with a paint horse on a sagebrush hillside in central Wyoming.">
+  <div class="hero-wrap">
+    <img class="stack-img" src="/assets/img/bio-hero.jpg" alt="Black-and-white photograph of a girl with a paint horse on a sagebrush hillside in central Wyoming.">
+    <div class="txt story-card"><p>My story took shape on the high plains of central Wyoming, a landscape famous for its desolate expanses, fierce winds, and conservative culture. I grew up surrounded by space, and lots of it, but I harbored a distinct feeling of isolation from a young age. (Painful experiences being bullied in elementary school didn&rsquo;t help.) Books offered me a means of transcending the confines of my geographical isolation and social exclusion, I especially delighted in stories about the fearless and independent pioneer women who walked my same lands.</p></div>
+  </div>
   <div class="map-wrap">
-    <div class="txt bridge"><p>My story took shape on the high plains of central Wyoming, a landscape famous for its desolate expanses, fierce winds, and conservative culture. I grew up surrounded by space, and lots of it, but I harbored a distinct feeling of isolation from a young age. (Painful experiences being bullied in elementary school didn&rsquo;t help.) Books offered me a means of transcending the confines of my geographical isolation and social exclusion, I especially delighted in stories about the fearless and independent pioneer women who walked my same lands.</p></div>
     <img class="stack-img" src="/assets/img/fukuoka-aerial.jpg" alt="Satellite map view of the family ranch on Dusty Lane in Wyoming, with Lindsey&rsquo;s old Fukuoka address typed in the search bar.">
     <div class="txt second"><p>A Japanese aunt living across the country sparked my interest in Asia early on, and thanks to her I started reading stories about and by women in Japan and the lands they walked. The path of learning and education I set out upon, influenced by these early experiences and nurtured by a series of especially fine mentors, has led me through an array of spaces.</p></div>
   </div>
@@ -129,15 +131,13 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   </div>
 </section>
 
-<section class="panel img-paris" role="img" aria-label="Lindsey and her daughters on Pont Alexandre III in Paris, the Eiffel Tower in the distance."></section>
-
-<section class="favorites">
-  <div class="fav-inner">
+<section class="panel img-paris overlay overlay-left">
+  <div class="txt fav-card">
     <p class="fav-lead">And then we have all the rest. I&rsquo;ll end here with just a few of my favorite things:</p>
-    <p style="--i:0">road trips.</p>
-    <p style="--i:1">dinner parties.</p>
-    <p style="--i:2">walks in nature.</p>
-    <p style="--i:3">dance sessions with my favorite DJ (my husband) and his two superfans (our daughters).</p>
+    <p class="fav" style="--i:0">road trips.</p>
+    <p class="fav" style="--i:1">dinner parties.</p>
+    <p class="fav" style="--i:2">walks in nature.</p>
+    <p class="fav" style="--i:3">dance sessions with my favorite DJ (my husband) and his two superfans (our daughters).</p>
   </div>
 </section>
 
