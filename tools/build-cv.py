@@ -127,6 +127,16 @@ def build(docx_path):
         out.append('</section>')
         toc.append(f'<a href="#{sid}">{esc(d["label"])}</a>')
     body = '\n'.join(out)
+    # site ruling 2026-08-09: four speaking titles link out (until the docx carries these)
+    LINKFIX = [
+        ("Futureproofing Anthropology: What the World Needs from Us", "https://www.ucl.ac.uk/social-historical-sciences/events/2026/jun/futureproofing-anthropology-what-world-needs-us"),
+        ("It\u2019s Not One Shot \u2014 Automation and Craftwork in Creative Production", "https://www.epicpeople.org/event/its-not-one-shot-automation-and-craftwork-in-creative-production/"),
+        ("Why Are Larger Models Becoming Less Transparent?", "https://www.youtube.com/watch?v=sXUB2QNuWZ0"),
+        ("The Certification Gold Rush: Global AI Standards and Certification Frameworks", "https://af.net/news/the-certification-gold-rush/"),
+    ]
+    for t, u in LINKFIX:
+        if f'>{t}<' not in body:
+            body = body.replace(t, f'<a href="{u}">{t}</a>', 1)
     # site ruling 2026-08-09: under-review entry names no journal
     body = body.replace('\u201d <em>ACM Journal on Responsible Computing</em>.', '\u201d')
     tochtml = '<nav class="toc" aria-label="Sections">' + ''.join(toc) + '</nav>'

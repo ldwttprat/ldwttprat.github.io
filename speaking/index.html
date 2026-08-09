@@ -54,11 +54,13 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   .gallery{columns:1}
   .testimonial{grid-template-columns:1fr;padding:26px}
 }
+.to-top{position:fixed;bottom:22px;right:22px;width:44px;height:44px;border-radius:50%;background:var(--paper);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Avenir Next',Avenir,sans-serif;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 10px rgba(33,30,26,.14);z-index:20}
+.to-top:hover{background:var(--accent);color:var(--paper)}
 </style>
 </head>
 <body>
 
-<header class="site-head">
+<header class="site-head" id="top">
   <div class="shell">
     <a class="wordmark" href="/">Lindsey DeWitt Prat, PhD</a>
     <nav class="site-nav" aria-label="Site">
@@ -134,5 +136,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   </div>
 </footer>
 
+
+<a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
 </body>
 </html>

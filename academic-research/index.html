@@ -63,11 +63,13 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   .vlabel{display:none}
   .outro{grid-template-columns:1fr;gap:28px}
 }
+.to-top{position:fixed;bottom:22px;right:22px;width:44px;height:44px;border-radius:50%;background:var(--paper);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Avenir Next',Avenir,sans-serif;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 10px rgba(33,30,26,.14);z-index:20}
+.to-top:hover{background:var(--accent);color:var(--paper)}
 </style>
 </head>
 <body>
 
-<header class="site-head">
+<header class="site-head" id="top">
   <div class="shell">
     <a class="wordmark" href="/">Lindsey DeWitt Prat, PhD</a>
     <nav class="site-nav" aria-label="Site">
@@ -93,13 +95,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   </section>
 
   <section class="feature">
+    <span class="vlabel jp" lang="ja" aria-hidden="true">言語文化</span>
     <figure>
       <img src="/assets/img/spk-llm-africa-talk.jpg" alt="Lindsey presenting Ethnographic LLM Research in Africa on a conference stage.">
     </figure>
     <div>
       <h2>AI &amp; Global Languages and Cultures</h2>
-      <p>My current research examines how AI systems behave across languages and cultural contexts&mdash;what gets measured, what goes missing, and who decides. With collaborators across four continents, I study how and by whom AI systems are designed, evaluated, and deployed globally.</p>
-      <p class="tile-links"><a href="https://doi.org/10.1111/epic.12196">Decolonizing LLMs &rarr;</a> &nbsp; <a href="https://doi.org/10.1111/epic.70006">From Chaos to Innovation &rarr;</a> &nbsp; <a href="https://doi.org/10.1111/epic.70011">Interactive AI &amp; Cultural Complexity &rarr;</a> &nbsp; <a href="https://inclusiveailab.org/2027-fellows/">Inclusive AI Lab &rarr;</a></p>
+      <p>My current research examines how AI systems behave across languages and cultural contexts&mdash;what gets measured, what goes missing, and who decides. With collaborators across four continents, I study how and by whom AI systems are designed, evaluated, and deployed globally. My essays on philosophy and AI take up the philosophical assumptions baked into current technology systems and the world of possibilities at our avail.</p>
+      <p class="tile-links"><a href="https://doi.org/10.1111/epic.12196">Decolonizing LLMs &rarr;</a> &nbsp; <a href="https://doi.org/10.1111/epic.70006">From Chaos to Innovation &rarr;</a> &nbsp; <a href="https://doi.org/10.1111/epic.70011">Interactive AI &amp; Cultural Complexity &rarr;</a> &nbsp; <a href="https://inclusiveailab.org/2027-fellows/">Inclusive AI Lab &rarr;</a> &nbsp; <a href="https://lindseydewittprat.substack.com/p/philosophy-ai-what-is-it-where-is">Philosophy &times; AI on Substack &rarr;</a></p>
     </div>
   </section>
 
@@ -144,7 +147,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
       <img src="/assets/img/acad-closing.jpg" alt="A shopfront window in a pilgrimage town hung with paper lanterns, a cat mask and local goods inside, and Lindsey's reflection in the glass as she takes the photograph." loading="lazy">
     </figure>
     <h2>Check out my research and life in Japan<br>
-    <a href="https://lindseydewittprat.substack.com/archive">blog archive</a> (2007&ndash;2022) and my <a href="/press/">media</a> and <a href="https://www.instagram.com/ledewitt/">image</a> galleries<em>.</em></h2>
+    <a href="https://lindseydewittprat.substack.com/archive">blog archive</a> (2007&ndash;2022) and my <a href="/press/">media</a> and <a href="/gallery/">image</a> galleries<em>.</em></h2>
   </section>
 
 </main>
@@ -160,5 +163,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   </div>
 </footer>
 
+
+<a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
 </body>
 </html>

@@ -79,11 +79,13 @@ figcaption{font-size:.82rem;color:var(--muted);padding-top:10px;letter-spacing:.
   .index li{grid-template-columns:56px minmax(0,1fr)}
   .index .title{grid-column:2}
 }
+.to-top{position:fixed;bottom:22px;right:22px;width:44px;height:44px;border-radius:50%;background:var(--paper);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Avenir Next',Avenir,sans-serif;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 10px rgba(33,30,26,.14);z-index:20}
+.to-top:hover{background:var(--accent);color:var(--paper)}
 </style>
 </head>
 <body>
 
-<header class="site-head">
+<header class="site-head" id="top">
   <div class="shell">
     <a class="wordmark" href="/">Lindsey DeWitt Prat, PhD</a>
     <nav class="site-nav" aria-label="Site">
@@ -120,7 +122,7 @@ figcaption{font-size:.82rem;color:var(--muted);padding-top:10px;letter-spacing:.
       <p class="kicker">Television</p>
       <h2>Forgotten Treasure: A Message from Okinoshima</h2>
       <p class="jp-title jp" lang="ja">忘れられた宝物～沖ノ島からのメッセージ～</p>
-      <p class="meta">Full-length documentary&mdash;concept, research, and host. FBS Fukuoka Broadcasting. Premiered August 12, 2017.</p>
+      <p class="meta">Full-length documentary&mdash;concept, research, and host. FBS Fukuoka Broadcasting. Premiered August 12, 2017. Official selection, Agency for Cultural Affairs, Government of Japan&rsquo;s 72nd Japan Media Arts Festival (<span class="jp" lang="ja">文化庁芸術祭</span>).</p>
       <a class="more" href="https://www.fbs.co.jp/company/standard/banshin/archive/1709banshin.html">About the program &rarr;</a>
     </div>
   </section>
@@ -159,7 +161,7 @@ figcaption{font-size:.82rem;color:var(--muted);padding-top:10px;letter-spacing:.
       <li>
         <span class="yr">2017</span>
         <span class="outlet">RELNET</span>
-        <span class="title"><a href="http://www.relnet.co.jp/relnet/news/2017/1226.html" class="jp" lang="ja">「壁」をテーマにコルモス会議</a><span class="gloss">&ldquo;Colmos Conference Takes &lsquo;Walls&rsquo; as Its Theme.&rdquo; December 27.</span></span>
+        <span class="title"><a href="http://www.relnet.co.jp/relnet/news/2017/1226.html" class="jp" lang="ja">「壁」をテーマにコルモス会議</a><span class="gloss">&ldquo;CORMOS Conference Takes &lsquo;Walls&rsquo; as Its Theme.&rdquo; December 27.</span></span>
       </li>
       <li>
         <span class="yr">2017</span>
@@ -179,7 +181,7 @@ figcaption{font-size:.82rem;color:var(--muted);padding-top:10px;letter-spacing:.
       <li>
         <span class="yr">2017</span>
         <span class="outlet">FBS Fukuoka Broadcasting</span>
-        <span class="title"><a href="https://www.fbs.co.jp/company/standard/banshin/archive/1709banshin.html" class="jp" lang="ja">忘れられた宝物～沖ノ島からのメッセージ～</a><span class="gloss">&ldquo;Forgotten Treasure: A Message from Okinoshima.&rdquo; Full-length documentary&mdash;concept, research, host. Premiered August 12.</span></span>
+        <span class="title"><a href="https://www.fbs.co.jp/company/standard/banshin/archive/1709banshin.html" class="jp" lang="ja">忘れられた宝物～沖ノ島からのメッセージ～</a><span class="gloss">&ldquo;Forgotten Treasure: A Message from Okinoshima.&rdquo; Full-length documentary&mdash;concept, research, host. Premiered August 12. Official selection, Agency for Cultural Affairs, Government of Japan&rsquo;s 72nd Japan Media Arts Festival (<span class="jp" lang="ja">文化庁芸術祭</span>).</span></span>
       </li>
       <li>
         <span class="yr">2017</span>
@@ -222,5 +224,7 @@ figcaption{font-size:.82rem;color:var(--muted);padding-top:10px;letter-spacing:.
   </div>
 </footer>
 
+
+<a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
 </body>
 </html>
