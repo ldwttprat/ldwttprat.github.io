@@ -127,6 +127,8 @@ def build(docx_path):
         out.append('</section>')
         toc.append(f'<a href="#{sid}">{esc(d["label"])}</a>')
     body = '\n'.join(out)
+    # site ruling 2026-08-09: under-review entry names no journal
+    body = body.replace('\u201d <em>ACM Journal on Responsible Computing</em>.', '\u201d')
     tochtml = '<nav class="toc" aria-label="Sections">' + ''.join(toc) + '</nav>'
     assert body.count('<a ') == body.count('</a>'), "unbalanced anchors"
     assert not re.search(r'href="[^"]*<', body), "tag inside href"
