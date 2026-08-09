@@ -93,26 +93,39 @@ def render(segs):
 
 def plain(segs): return re.sub(r'\s+', ' ', ''.join(s[0] for s in segs)).strip()
 
+ORDER = ["current-positions", "education", "academic-employment", "languages",
+         "research-leadership", "peer-reviewed-publications", "other-publications",
+         "awards", "conferences-organized", "speaking-engagements",
+         "invited-academic-lectures", "invited-workshops", "panels-organized",
+         "refereed-presentations", "academic-outreach", "teaching",
+         "scholarships-fellowships", "grants", "professional-training",
+         "in-the-media", "memberships"]
+
 def build(docx_path):
-    started, out, toc = False, [], []
+    cur, secs = None, {}
     for segs in parse_paragraphs(docx_path):
         txt = plain(segs)
         if txt in HEADER_IDS:
             sid, label = HEADER_IDS[txt]
-            if started: out.append('</section>')
-            started = True
-            out.append(f'<section id="{sid}"><h2>{esc(txt)}</h2>')
-            toc.append(f'<a href="#{sid}">{esc(label)}</a>')
-        elif not started:
+            cur = sid
+            secs[sid] = {"title": txt, "label": label, "rows": []}
+        elif cur is None:
             continue
         elif txt in SUBHEADS:
-            out.append(f'<h3>{esc(txt)}</h3>')
+            secs[cur]["rows"].append(f'<h3>{esc(txt)}</h3>')
         else:
             h = render(segs)
             m = PREFIX.match(h)
             if m: h = f'<strong>{m.group(1)}</strong> {m.group(2)}'
-            out.append(f'<p class="item">{h}</p>')
-    out.append('</section>')
+            secs[cur]["rows"].append(f'<p class="item">{h}</p>')
+    order = [i for i in ORDER if i in secs] + [i for i in secs if i not in ORDER]
+    out, toc = [], []
+    for sid in order:
+        d = secs[sid]
+        out.append(f'<section id="{sid}"><h2>{esc(d["title"])}</h2>')
+        out.extend(d["rows"])
+        out.append('</section>')
+        toc.append(f'<a href="#{sid}">{esc(d["label"])}</a>')
     body = '\n'.join(out)
     tochtml = '<nav class="toc" aria-label="Sections">' + ''.join(toc) + '</nav>'
     assert body.count('<a ') == body.count('</a>'), "unbalanced anchors"
@@ -124,7 +137,7 @@ if __name__ == '__main__':
     for path in [os.path.join(REPO, 'dewittcv/index.html'), os.path.join(MEDIAKIT, 'cv-squarespace.html')]:
         s = open(path).read()
         s = re.sub(r'<nav class="toc"[^>]*>.*?</nav>', lambda m: tochtml, s, count=1, flags=re.S)
-        head_end = s.index('</header>') + len('</header>')
+        head_end = s.index('</header>', s.index('class="masthead"')) + len('</header>')
         s = s[:head_end] + '\n' + body + '\n' + s[s.index('<footer class="updated">'):]
         open(path, 'w').write(s)
         print('spliced:', path)

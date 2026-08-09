@@ -14,7 +14,7 @@
   --paper:#FCFBF8;
   --ink:#211E1A;
   --muted:#6E675C;
-  --accent:#A6432C;
+  --accent:#E60415;
   --line:#DDD7CC;
 }
 *{box-sizing:border-box}
@@ -23,7 +23,7 @@ a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 .shell{max-width:1220px;margin:0 auto;padding:0 24px;width:100%}
 .site-head{position:relative;z-index:2}
-.site-head .shell{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 28px;padding-top:26px;padding-bottom:22px}
+.site-head .shell{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;gap:12px 28px;padding-top:26px;padding-bottom:22px}
 .wordmark{font-family:'Archivo',sans-serif;font-weight:600;font-size:.98rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
 .site-nav{display:flex;flex-wrap:wrap;gap:4px 20px}
 .site-nav a{font-family:'Archivo',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.04em;color:var(--ink);text-decoration:none}
@@ -31,11 +31,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 main{flex:1;display:flex;position:relative}
 main::before{content:'';position:absolute;inset:0;background:url('/assets/img/bio-ominesan.jpg') center 58%/cover no-repeat;opacity:.16;filter:saturate(.55)}
 .cover{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding-top:60px;padding-bottom:110px}
-.kicker{font-family:'Archivo',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 26px}
 h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.6rem,8.2vw,6.4rem);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;margin:0 0 10px;max-width:12ch}
 h1 .cred{display:block;font-weight:600;font-size:clamp(.9rem,1.6vw,1.15rem);letter-spacing:.22em;margin-top:14px;color:var(--muted)}
 .script{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.35rem,2.8vw,2rem);line-height:1.45;color:var(--ink);max-width:24em;margin:26px 0 0;letter-spacing:.01em}
 .cta{font-family:'Source Serif 4',Georgia,serif;font-weight:400;font-size:1.08rem;margin:38px 0 0}
+.hanko{position:absolute;right:clamp(24px,6vw,110px);bottom:18vh;width:clamp(72px,9vw,124px);transform:rotate(-3deg)}
+@media (max-width:640px){.hanko{position:static;transform:none;width:64px;margin:34px 0 0}}
 .site-foot{position:relative;z-index:2;border-top:1px solid var(--line)}
 .site-foot .shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-top:24px;padding-bottom:30px;font-size:.84rem;color:var(--muted);font-family:'Archivo',sans-serif}
 .site-foot a{color:var(--muted)}
@@ -45,7 +46,6 @@ h1 .cred{display:block;font-weight:600;font-size:clamp(.9rem,1.6vw,1.15rem);lett
 
 <header class="site-head">
   <div class="shell">
-    <a class="wordmark" href="/">Lindsey DeWitt Prat, PhD</a>
     <nav class="site-nav" aria-label="Site">
       <a href="/bio/">Bio</a>
       <a href="/dewittcv/">CV</a>
@@ -61,10 +61,10 @@ h1 .cred{display:block;font-weight:600;font-size:clamp(.9rem,1.6vw,1.15rem);lett
 
 <main>
   <div class="shell cover">
-    <p class="kicker">Research &middot; Translation &middot; Interpretation</p>
     <h1>Lindsey DeWitt&nbsp;Prat<span class="cred">PhD &middot; Paris</span></h1>
     <p class="script">Research and translation across languages, cultures, and technology</p>
     <p class="cta"><a href="https://lindseydewittprat.substack.com/">Read my recent writing &rarr;</a></p>
+    <img class="hanko" src="/assets/img/hanko.png" alt="Lindsey&rsquo;s personal hanko seal">
   </div>
 </main>
 
