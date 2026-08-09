@@ -35,20 +35,20 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .panel.overlay .txt{max-width:640px;color:var(--ink);background:rgba(252,251,248,.9);padding:36px 40px;box-shadow:0 2px 24px rgba(33,30,26,.08)}
 .panel.overlay .txt p{margin:0 0 1.5em}
 .panel.overlay .txt p:last-child{margin-bottom:0}
-.hero-horse{background-image:url('/assets/img/bio-hero.jpg');background-position:center 55%}
 .img-barn{background-image:url('/assets/img/bio-barn.jpg')}
 .img-ominesan{background-image:url('/assets/img/bio-ominesan.jpg')}
 .img-paris{background-image:url('/assets/img/paris.jpg');background-position:center 68%}
-/* aerial block: cards bridging hero and map */
-.aerial-block{position:relative}
-.aerial-block .txt{max-width:600px;background:rgba(252,251,248,.93);padding:34px 38px;box-shadow:0 2px 24px rgba(33,30,26,.12);position:relative;z-index:2}
-.aerial-block .txt p{margin:0}
-.bridge{position:absolute;top:0;left:24px;right:24px;margin:0 auto;transform:translateY(-52%)}
-.fukuoka{width:100%;display:block}
-.second{margin:-150px clamp(16px,7vw,110px) 0 auto}
-@media (max-width:720px){.bridge{position:static;transform:none;margin:-60px 16px 14px}.second{margin:14px 16px 0 auto}}
+/* seamless image stack with floating cards */
+.story-stack{font-size:0}
+.stack-img{width:100%;display:block}
+.map-wrap{position:relative;font-size:16.5px}
+.map-wrap .txt,.story-stack .txt{max-width:600px;background:rgba(252,251,248,.93);padding:34px 38px;box-shadow:0 2px 24px rgba(33,30,26,.12);font-size:16.5px;line-height:1.8}
+.story-stack .txt p{margin:0}
+.bridge{position:absolute;top:0;left:24px;right:24px;margin:0 auto;transform:translateY(-52%);z-index:2}
+.second{position:absolute;bottom:clamp(16px,6vh,60px);right:clamp(16px,7vw,110px);left:24px;margin-left:auto;z-index:2}
+@media (max-width:720px){.bridge{position:static;transform:none;margin:-60px 16px 14px}.second{position:static;margin:14px 16px 0 auto}}
 /* places band */
-.places-band{position:relative;padding:130px 24px}
+.places-band{position:relative;padding:64px 24px}
 .places-band::before{content:'';position:absolute;inset:0;background:url('/assets/img/bamboo.jpg') center/cover;opacity:.16;filter:saturate(.6)}
 .places-band .places{position:relative;max-width:660px;margin:0 auto}
 .places-band p{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:1.3rem;line-height:1.6;color:var(--ink);margin:0 0 16px;padding-left:calc(var(--i)*clamp(10px,3vw,34px))}
@@ -59,7 +59,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .paper-text .txt p{margin:0 0 1.5em}
 .paper-text .txt p:last-child{margin-bottom:0}
 /* favorites — spatial inverse of the places */
-.favorites{position:relative;padding:130px 24px 150px}
+.favorites{position:relative;padding:64px 24px 76px}
 .favorites::before{content:'';position:absolute;inset:0;background:url('/assets/img/bamboo.jpg') center/cover;opacity:.16;filter:saturate(.6)}
 .fav-inner{position:relative;max-width:660px;margin:0 auto;text-align:right}
 .fav-lead{font-size:1.02rem;margin:0 0 34px}
@@ -93,12 +93,13 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
   </div>
 </header>
 
-<section class="panel hero-horse" role="img" aria-label="Black-and-white photograph of a girl with a paint horse on a sagebrush hillside in central Wyoming."></section>
-
-<section class="aerial-block">
-  <div class="txt bridge"><p>My story took shape on the high plains of central Wyoming, a landscape famous for its desolate expanses, fierce winds, and conservative culture. I grew up surrounded by space, and lots of it, but I harbored a distinct feeling of isolation from a young age. (Painful experiences being bullied in elementary school didn&rsquo;t help.) Books offered me a means of transcending the confines of my geographical isolation and social exclusion, I especially delighted in stories about the fearless and independent pioneer women who walked my same lands.</p></div>
-  <img class="fukuoka" src="/assets/img/fukuoka-aerial.jpg" alt="Satellite map view of the family ranch on Dusty Lane in Wyoming, with Lindsey&rsquo;s old Fukuoka address typed in the search bar.">
-  <div class="txt second"><p>A Japanese aunt living across the country sparked my interest in Asia early on, and thanks to her I started reading stories about and by women in Japan and the lands they walked. The path of learning and education I set out upon, influenced by these early experiences and nurtured by a series of especially fine mentors, has led me through an array of spaces.</p></div>
+<section class="story-stack">
+  <img class="stack-img" src="/assets/img/bio-hero.jpg" alt="Black-and-white photograph of a girl with a paint horse on a sagebrush hillside in central Wyoming.">
+  <div class="map-wrap">
+    <div class="txt bridge"><p>My story took shape on the high plains of central Wyoming, a landscape famous for its desolate expanses, fierce winds, and conservative culture. I grew up surrounded by space, and lots of it, but I harbored a distinct feeling of isolation from a young age. (Painful experiences being bullied in elementary school didn&rsquo;t help.) Books offered me a means of transcending the confines of my geographical isolation and social exclusion, I especially delighted in stories about the fearless and independent pioneer women who walked my same lands.</p></div>
+    <img class="stack-img" src="/assets/img/fukuoka-aerial.jpg" alt="Satellite map view of the family ranch on Dusty Lane in Wyoming, with Lindsey&rsquo;s old Fukuoka address typed in the search bar.">
+    <div class="txt second"><p>A Japanese aunt living across the country sparked my interest in Asia early on, and thanks to her I started reading stories about and by women in Japan and the lands they walked. The path of learning and education I set out upon, influenced by these early experiences and nurtured by a series of especially fine mentors, has led me through an array of spaces.</p></div>
+  </div>
 </section>
 
 <section class="places-band">
