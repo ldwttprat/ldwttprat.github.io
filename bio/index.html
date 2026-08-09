@@ -59,8 +59,9 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .paper-text .txt p{margin:0 0 1.5em}
 .paper-text .txt p:last-child{margin-bottom:0}
 /* favorites — spatial inverse of the places */
-.favorites{border-top:1px solid #DDD7CC;padding:120px 24px 140px}
-.fav-inner{max-width:660px;margin:0 auto;text-align:right}
+.favorites{position:relative;padding:130px 24px 150px}
+.favorites::before{content:'';position:absolute;inset:0;background:url('/assets/img/bamboo.jpg') center/cover;opacity:.16;filter:saturate(.6)}
+.fav-inner{position:relative;max-width:660px;margin:0 auto;text-align:right}
 .fav-lead{font-size:1.02rem;margin:0 0 34px}
 .favorites p{margin:0 0 16px}
 .fav-inner p[style]{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:1.3rem;line-height:1.6;padding-right:calc(var(--i)*clamp(10px,3vw,34px))}
