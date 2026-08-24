@@ -34,6 +34,13 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
 .bio-card{position:relative;background:var(--wash);border:1px solid var(--line);padding:26px 30px;max-width:760px}
 .bio-card p{margin:0}
 .bio-card p + p{margin-top:1.1em}
+.bio-body{position:relative;max-height:9em;overflow:hidden}
+.bio-body.open{max-height:none}
+.bio-body::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3.2em;background:linear-gradient(to bottom,rgba(245,241,234,0),var(--wash));pointer-events:none}
+.bio-body.open::after,.bio-body.fits::after{display:none}
+.bio-toggle{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:none;border:0;padding:0;margin:14px 0 0;cursor:pointer}
+.bio-toggle:hover{text-decoration:underline;text-underline-offset:3px}
+.bio-toggle[hidden]{display:none}
 .bio-card + h2.sect{margin-top:44px}
 .copy-btn{position:absolute;top:10px;right:10px;font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line);padding:4px 10px;cursor:pointer}
 .copy-btn:hover{color:var(--accent);border-color:var(--accent)}
@@ -80,27 +87,34 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
     <p>For event organizers and press: copy a bio, download a photo.</p>
   </section>
 
-  <h2 class="sect">Bio</h2>
-  <div class="bio-card">
-    <button class="copy-btn" type="button" data-copy="bio-full">Copy</button>
-    <p id="bio-full">Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. With a background in global politics, premodern Asian religions, visual culture, ritual technologies, and placemaking, Lindsey’s practice is fundamentally multidimensional. She is currently a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia, and a 2026–27 Fellow of Utrecht University’s Inclusive AI Lab.</p>
-  </div>
-
   <h2 class="sect">Long bio</h2>
   <div class="bio-card">
     <button class="copy-btn" type="button" data-copy="bio-long">Copy</button>
-    <div id="bio-long">
+    <div class="bio-body" id="bio-long">
       <p>Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. With a background in global politics, premodern Asian religions, visual culture, ritual technologies, and placemaking, Lindsey’s practice is fundamentally multidimensional.</p>
       <p>She received her PhD in Asian Languages and Cultures from UCLA and held academic appointments at Kyushu University in Japan and Ghent University in Belgium, where her research examined the social and historical formation of sacred sites, cultural heritage, and gender exclusion. Fieldwork took her up mountains closed to women, studying who may enter and who may not. Since 2022 she has designed and led global research programs on artificial intelligence and emerging technology at Bold Insight, turning methods honed on the past toward the future.</p>
       <p>She serves on the governing board of EPIC People, a global community of more than 13,000 research practitioners bridging academia and industry. For the IEEE Global AIS Flourishing Initiative she is lead author of the first white paper and co-chairs the Global Networks, Languages &amp; Cultures Committee. Research affiliations follow at the University of Western Australia and Utrecht University’s Inclusive AI Lab, alongside a Distinguished Fellowship at the Da Nang Policy Lab in Vietnam and program faculty duties for the Innovation Policy Ignition Programme at Hughes Hall, University of Cambridge.</p>
       <p>Her scholarship includes chapters and articles with Routledge, Bloomsbury Academic, and Oxford University Press, and the co-edited volume <em>Water Powers: Sacred Aquatic Animals of the Asia-Pacific</em> (University of Hawai‘i Press). A co-authored ethnographic study of large language models in African contexts won the UXalliance Most Impactful Project Award and was featured at the AI for Developing Countries Forum at the United Nations in Geneva. Her Japanese-to-English translation practice serves corporate and cultural clients, among them Mori Building and the Government of Japan. Trained in classical Japanese and classical Chinese, she reads old texts and new systems with the same philological care.</p>
     </div>
+    <button class="bio-toggle" type="button">Expand</button>
+  </div>
+
+  <h2 class="sect">Bio</h2>
+  <div class="bio-card">
+    <button class="copy-btn" type="button" data-copy="bio-full">Copy</button>
+    <div class="bio-body" id="bio-full">
+      <p>Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. With a background in global politics, premodern Asian religions, visual culture, ritual technologies, and placemaking, Lindsey’s practice is fundamentally multidimensional. She is currently a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia, and a 2026–27 Fellow of Utrecht University’s Inclusive AI Lab.</p>
+    </div>
+    <button class="bio-toggle" type="button">Expand</button>
   </div>
 
   <h2 class="sect">Short bio</h2>
   <div class="bio-card">
     <button class="copy-btn" type="button" data-copy="bio-short">Copy</button>
-    <p id="bio-short">Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. She is a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, and an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia.</p>
+    <div class="bio-body" id="bio-short">
+      <p>Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. She is a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, and an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia.</p>
+    </div>
+    <button class="bio-toggle" type="button">Expand</button>
   </div>
 
   <h2 class="sect">Photos</h2>
@@ -144,6 +158,20 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
 <a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
 
 <script>
+document.querySelectorAll('.bio-card').forEach(function(card){
+  var body=card.querySelector('.bio-body'),toggle=card.querySelector('.bio-toggle');
+  if(!body||!toggle) return;
+  if(body.scrollHeight<=body.clientHeight+2){
+    body.classList.add('fits');
+    toggle.hidden=true;
+    return;
+  }
+  toggle.addEventListener('click',function(){
+    var open=body.classList.toggle('open');
+    toggle.textContent=open?'Collapse':'Expand';
+  });
+});
+
 document.querySelectorAll('.copy-btn').forEach(function(btn){
   btn.addEventListener('click',function(){
     var el=document.getElementById(btn.dataset.copy);
