@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bio &amp; Photos — Lindsey DeWitt Prat, PhD</title>
+<link rel="icon" href="/assets/img/favicon.ico">
+<style>
+:root{
+  --paper:#FCFBF8;
+  --ink:#211E1A;
+  --muted:#6E675C;
+  --accent:#E60415;
+  --line:#DDD7CC;
+  --wash:#F5F1EA;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Charter,'Bitstream Charter','Iowan Old Style',Georgia,'Hiragino Mincho ProN','Yu Mincho',serif;font-size:16.5px;line-height:1.8}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.shell{max-width:1140px;margin:0 auto;padding:0 24px}
+.site-head{border-bottom:1px solid var(--line)}
+.site-head .shell{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 28px;padding-top:26px;padding-bottom:22px}
+.wordmark{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);text-decoration:none}
+.site-nav{display:flex;flex-wrap:wrap;gap:4px 22px}
+.site-nav a{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:500;font-size:.86rem;color:var(--ink);text-decoration:none;padding:2px 0}
+.site-nav a:hover{color:var(--accent)}
+.kicker{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.intro{padding:56px 0 10px}
+.intro p{max-width:640px;margin:0 0 8px}
+h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:1.08rem;margin:44px 0 14px}
+/* copyable bio cards */
+.bio-card{position:relative;background:var(--wash);border:1px solid var(--line);padding:26px 30px;max-width:760px}
+.bio-card p{margin:0}
+.bio-card + h2.sect{margin-top:44px}
+.copy-btn{position:absolute;top:10px;right:10px;font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line);padding:4px 10px;cursor:pointer}
+.copy-btn:hover{color:var(--accent);border-color:var(--accent)}
+/* photo grid */
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:36px 26px;list-style:none;margin:0 0 10px;padding:0}
+.photo .frame{background:var(--wash);margin:0 0 12px}
+.photo .frame img{width:100%;display:block}
+.photo .dl{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.84rem;margin:0 0 4px}
+.photo .dl .size{font-weight:400;font-size:.76rem;color:var(--muted)}
+.photo .frame.linkout{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.photo .frame.linkout p{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-size:.92rem;line-height:1.6;color:var(--muted);margin:0}
+.credit{max-width:640px;color:var(--muted);font-size:.95rem;margin:26px 0 84px}
+.site-foot{border-top:1px solid var(--line)}
+.site-foot .shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-top:26px;padding-bottom:34px;font-size:.84rem;color:var(--muted)}
+.foot-hanko{width:24px;vertical-align:-7px;margin-right:8px}
+.site-foot a{color:var(--muted)}
+.to-top{position:fixed;bottom:22px;right:22px;width:44px;height:44px;border-radius:50%;background:var(--paper);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Avenir Next',Avenir,sans-serif;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 10px rgba(33,30,26,.14);z-index:20}
+.to-top:hover{background:var(--accent);color:var(--paper)}
+</style>
+</head>
+<body>
+
+<header class="site-head" id="top">
+  <div class="shell">
+    <a class="wordmark" href="/">Lindsey DeWitt Prat, PhD</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/bio/">Bio</a>
+      <a href="/dewittcv/">CV</a>
+      <a href="/povs/">POVs</a>
+      <a href="/academic-research/">Academia</a>
+      <a href="/speaking/">Speaking</a>
+      <a href="/translation/">Translation</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/press/">Press</a>
+    </nav>
+  </div>
+</header>
+
+<main class="shell">
+
+  <section class="intro">
+    <p class="kicker">Bio &amp; Photos</p>
+    <p>For event organizers and press: copy a bio, download a photo.</p>
+  </section>
+
+  <h2 class="sect">Bio</h2>
+  <div class="bio-card">
+    <button class="copy-btn" type="button" data-copy="bio-full">Copy</button>
+    <p id="bio-full">Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. With a background in global politics, premodern Asian religions, visual culture, ritual technologies, and placemaking, Lindsey’s practice is fundamentally multidimensional. She is currently a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia, and a 2026–27 Fellow of Utrecht University’s Inclusive AI Lab.</p>
+  </div>
+
+  <h2 class="sect">Short bio</h2>
+  <div class="bio-card">
+    <button class="copy-btn" type="button" data-copy="bio-short">Copy</button>
+    <p id="bio-short">Lindsey DeWitt Prat is a translator by trade—Japanese to English—and by temperament, moving between old texts and new systems, research and practice, windswept Wyoming and Paris. She directs research at Bold Insight and serves on the board of EPIC.</p>
+  </div>
+
+  <h2 class="sect">Photos</h2>
+  <ul class="photos">
+    <li class="photo">
+      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0131-preview.jpg" alt="Portrait of Lindsey DeWitt Prat facing the camera, her face softly doubled by a long exposure, lit in orange and teal against a dark ground. Photo by Jan Opdekamp." loading="lazy"></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0131-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0131.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 26&nbsp;MB</span></p>
+    </li>
+    <li class="photo">
+      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0197-preview.jpg" alt="Profile portrait of Lindsey DeWitt Prat in warm orange light, a second exposure of her profile trailing behind the first against deep teal. Photo by Jan Opdekamp." loading="lazy"></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0197-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.4&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0197.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 36&nbsp;MB</span></p>
+    </li>
+    <li class="photo">
+      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0869-preview.jpg" alt="Portrait of Lindsey DeWitt Prat looking into the camera against a warm amber background, wearing an olive turtleneck and striped jacket. Photo by Jan Opdekamp." loading="lazy"></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0869-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.6&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0869.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 3&nbsp;MB</span></p>
+    </li>
+    <li class="photo">
+      <div class="frame linkout"><p>A conventional studio headshot lives on the Bold Insight people page.</p></div>
+      <p class="dl"><a href="https://boldinsight.com/people/">boldinsight.com/people &rarr;</a></p>
+    </li>
+  </ul>
+
+  <p class="credit">Please credit the three color portraits to <a href="https://www.janopdekamp.com">Jan Opdekamp</a>.</p>
+
+</main>
+
+<footer class="site-foot">
+  <div class="shell">
+    <span><img class="foot-hanko" src="/assets/img/hanko.png" alt="" aria-hidden="true"> &copy; 2026 Lindsey DeWitt Prat</span>
+    <span>
+      <a href="https://lindseydewittprat.substack.com/">Substack</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/ldprat-phd/">LinkedIn</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.instagram.com/ledewitt/">Instagram</a>
+    </span>
+  </div>
+</footer>
+
+<a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var el=document.getElementById(btn.dataset.copy);
+    navigator.clipboard.writeText(el.textContent.trim()).then(function(){
+      btn.textContent='Copied';
+      setTimeout(function(){btn.textContent='Copy';},1600);
+    });
+  });
+});
+</script>
+</body>
+</html>
