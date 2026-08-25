@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bio &amp; Photos — Lindsey DeWitt Prat, PhD</title>
+<title>Media Kit — Lindsey DeWitt Prat, PhD</title>
 <link rel="icon" href="/assets/img/favicon.ico">
 <style>
 :root{
@@ -31,10 +31,13 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .intro p{max-width:640px;margin:0 0 8px}
 h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:1.08rem;margin:44px 0 14px}
 /* copyable bio cards */
-.bio-card{position:relative;background:var(--wash);border:1px solid var(--line);padding:26px 30px;max-width:760px}
+.bios{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start;margin:14px 0 0}
+@media (max-width:900px){.bios{grid-template-columns:1fr;max-width:760px}}
+.bio-card{position:relative;background:var(--wash);border:1px solid var(--line);padding:22px 24px}
+.bio-label{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
 .bio-card p{margin:0}
-.bio-card p + p{margin-top:1.1em}
-.bio-body{position:relative;max-height:9em;overflow:hidden}
+.bio-card p + p{margin-top:1em}
+.bio-body{position:relative;max-height:17em;overflow:hidden;font-size:.95rem}
 .bio-body.open{max-height:none}
 .bio-body::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3.2em;background:linear-gradient(to bottom,rgba(245,241,234,0),var(--wash));pointer-events:none}
 .bio-body.open::after,.bio-body.fits::after{display:none}
@@ -42,7 +45,7 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
 .bio-toggle:hover{text-decoration:underline;text-underline-offset:3px}
 .bio-toggle[hidden]{display:none}
 .bio-card + h2.sect{margin-top:44px}
-.copy-btn{position:absolute;top:10px;right:10px;font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line);padding:4px 10px;cursor:pointer}
+.copy-btn{position:absolute;top:14px;right:14px;font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line);padding:4px 10px;cursor:pointer}
 .copy-btn:hover{color:var(--accent);border-color:var(--accent)}
 /* photo grid */
 .photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:36px 26px;list-style:none;margin:0 0 10px;padding:0}
@@ -83,42 +86,49 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
 <main class="shell">
 
   <section class="intro">
-    <p class="kicker">Bio &amp; Photos</p>
+    <p class="kicker">Media kit</p>
     <p>For event organizers and press: copy a bio, download a photo.</p>
   </section>
 
-  <h2 class="sect">Long bio</h2>
-  <div class="bio-card">
-    <button class="copy-btn" type="button" data-copy="bio-long">Copy</button>
-    <div class="bio-body" id="bio-long">
+  <div class="bios">
+    <div class="bio-card">
+      <h3 class="bio-label">Long bio</h3>
+      <button class="copy-btn" type="button" data-copy="bio-long">Copy</button>
+      <div class="bio-body" id="bio-long">
       <p>Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. With a background in global politics, premodern Asian religions, visual culture, ritual technologies, and placemaking, Lindsey’s practice is fundamentally multidimensional.</p>
       <p>After a PhD in Asian Languages and Cultures at UCLA, she taught at Kyushu University in Japan and Ghent University in Belgium, where her research examined the social and historical formation of sacred sites, cultural heritage, and gender exclusion. Fieldwork took her to mountains and sumo rings closed to women, tracing who may enter and who may not from premodern prohibitions through modern heritage law to arguments underway now. Since 2022 she has designed and led global research programs on emerging technology at Bold Insight, turning methods honed on the past toward the future.</p>
       <p>In 2025, EPIC People, a global community of more than 13,000 research practitioners bridging academia and industry, appointed her to its governing board. Alongside that work, she holds research affiliations at the University of Western Australia and Utrecht University’s Inclusive AI Lab, a Distinguished Fellowship at Vietnam’s Da Nang Policy Lab, and a program faculty seat with the Innovation Policy Ignition Programme at Hughes Hall, University of Cambridge.</p>
       <p>Lindsey’s published scholarship includes chapters and articles with Routledge, Bloomsbury Academic, and Oxford University Press, and the co-edited volume <em>Water Powers: Sacred Aquatic Animals of the Asia-Pacific</em> (University of Hawai‘i Press). A co-authored ethnographic study of large language models in African contexts, published in the EPIC Proceedings, won the UXalliance Most Impactful Project Award and was featured at the AI for Developing Countries Forum at the United Nations in Geneva. In parallel she translates from Japanese to English for corporate and cultural clients, among them Mori Building and the Government of Japan. Trained in classical Japanese and classical Chinese, she reads old texts and new systems with the same philological care.</p>
+      </div>
+      <button class="bio-toggle" type="button">Expand</button>
     </div>
-    <button class="bio-toggle" type="button">Expand</button>
-  </div>
 
-  <h2 class="sect">Bio</h2>
-  <div class="bio-card">
-    <button class="copy-btn" type="button" data-copy="bio-full">Copy</button>
-    <div class="bio-body" id="bio-full">
+    <div class="bio-card">
+      <h3 class="bio-label">Bio</h3>
+      <button class="copy-btn" type="button" data-copy="bio-full">Copy</button>
+      <div class="bio-body" id="bio-full">
       <p>Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. With a background in global politics, premodern Asian religions, visual culture, ritual technologies, and placemaking, Lindsey’s practice is fundamentally multidimensional. She is currently a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia, and a 2026–27 Fellow of Utrecht University’s Inclusive AI Lab.</p>
+      </div>
+      <button class="bio-toggle" type="button">Expand</button>
     </div>
-    <button class="bio-toggle" type="button">Expand</button>
-  </div>
 
-  <h2 class="sect">Short bio</h2>
-  <div class="bio-card">
-    <button class="copy-btn" type="button" data-copy="bio-short">Copy</button>
-    <div class="bio-body" id="bio-short">
+    <div class="bio-card">
+      <h3 class="bio-label">Short bio</h3>
+      <button class="copy-btn" type="button" data-copy="bio-short">Copy</button>
+      <div class="bio-body" id="bio-short">
       <p>Lindsey DeWitt Prat moved from windswept Wyoming to Paris by way of Japan—years on sacred mountains and classical texts, then a jump from Buddhist studies professor to industry research leader. She is a Director of Research at Bold Insight, an EPIC (epicpeople.org) Board Member, and an Adjunct Senior Research Fellow in Linguistics at the University of Western Australia.</p>
+      </div>
+      <button class="bio-toggle" type="button">Expand</button>
     </div>
-    <button class="bio-toggle" type="button">Expand</button>
   </div>
 
   <h2 class="sect">Photos</h2>
   <ul class="photos">
+    <li class="photo">
+      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0171-preview.jpg" alt="Portrait of Lindsey DeWitt Prat in a long exposure, her face dissolved behind streaks of orange light and hair against deep teal. Photo by Jan Opdekamp." loading="lazy"></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0171-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0171.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 35&nbsp;MB</span></p>
+    </li>
     <li class="photo">
       <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0131-preview.jpg" alt="Portrait of Lindsey DeWitt Prat facing the camera, her face softly doubled by a long exposure, lit in orange and teal against a dark ground. Photo by Jan Opdekamp." loading="lazy"></div>
       <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-0131-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
@@ -140,7 +150,7 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
     </li>
   </ul>
 
-  <p class="credit">Please credit the three color portraits to <a href="https://www.janopdekamp.com">Jan Opdekamp</a>.</p>
+  <p class="credit">Please credit the color portraits to <a href="https://www.janopdekamp.com">Jan Opdekamp</a>, from his <a href="https://www.janopdekamp.com/omote-sound">Omote Sound</a> series.</p>
 
 </main>
 
