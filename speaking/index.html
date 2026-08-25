@@ -38,9 +38,10 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .gallery{columns:2;column-gap:26px;margin:52px 0}
 .gallery figure{margin:0 0 26px;break-inside:avoid}
 .gallery img{width:100%;border:1px solid var(--line)}
-.clip{margin:52px 0;max-width:520px}
+.clip{margin:52px 0 52px auto;max-width:520px}
 .clip video{width:100%;display:block;border:1px solid var(--line);background:#000}
-.clip figcaption{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-size:.84rem;color:var(--muted);margin-top:10px}
+.clip figcaption{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-size:.84rem;color:var(--muted);margin-top:10px;text-align:right}
+@media (max-width:640px){.clip{margin:40px 0}.clip figcaption{text-align:left}}
 /* testimonial */
 .testimonial{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:44px;align-items:center;background:var(--wash);padding:44px;margin:56px 0 80px}
 .testimonial h2{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:1.4rem;letter-spacing:-.01em;margin:0 0 18px}
