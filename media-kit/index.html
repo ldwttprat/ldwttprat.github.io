@@ -52,7 +52,10 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
 @media (max-width:1000px){.photos{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:640px){.photos{grid-template-columns:repeat(2,1fr)}}
 .photo .frame{background:var(--wash);margin:0 0 12px}
-.photo .frame img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+.photo .frame img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;transition:opacity .2s ease}
+.photo .frame a{display:block}
+.photo .frame a:hover img{opacity:.86}
+@media (prefers-reduced-motion:reduce){.photo .frame img{transition:none}}
 .photo .dl{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.84rem;margin:0 0 4px}
 .photo .dl .size{font-weight:400;font-size:.76rem;color:var(--muted)}
 .photo .frame.linkout{position:relative;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
@@ -127,24 +130,24 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
   <h2 class="sect">Photos</h2>
   <ul class="photos">
     <li class="photo">
-      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-veiled-preview.jpg" alt="Portrait of Lindsey DeWitt Prat in a long exposure, her face dissolved behind streaks of orange light and hair against deep teal. Photo by Jan Opdekamp." loading="lazy"></div>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-veiled-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-veiled.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 35&nbsp;MB</span></p>
+      <div class="frame"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-1-screen.jpg" target="_blank" rel="noopener" aria-label="Open larger view"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-1-preview.jpg" alt="Portrait of Lindsey DeWitt Prat in a long exposure, her face dissolved behind streaks of orange light and hair against deep teal. Photo by Jan Opdekamp." loading="lazy"></a></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-1-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-1.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 35&nbsp;MB</span></p>
     </li>
     <li class="photo">
-      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-doubled-preview.jpg" alt="Portrait of Lindsey DeWitt Prat facing the camera, her face softly doubled by a long exposure, lit in orange and teal against a dark ground. Photo by Jan Opdekamp." loading="lazy"></div>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-doubled-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-doubled.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 26&nbsp;MB</span></p>
+      <div class="frame"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-2-screen.jpg" target="_blank" rel="noopener" aria-label="Open larger view"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-2-preview.jpg" alt="Portrait of Lindsey DeWitt Prat facing the camera, her face softly doubled by a long exposure, lit in orange and teal against a dark ground. Photo by Jan Opdekamp." loading="lazy"></a></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-2-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.3&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-2.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 26&nbsp;MB</span></p>
     </li>
     <li class="photo">
-      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-profile-preview.jpg" alt="Profile portrait of Lindsey DeWitt Prat in warm orange light, a second exposure of her profile trailing behind the first against deep teal. Photo by Jan Opdekamp." loading="lazy"></div>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-profile-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.4&nbsp;MB</span></p>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-profile.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 36&nbsp;MB</span></p>
+      <div class="frame"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-3-screen.jpg" target="_blank" rel="noopener" aria-label="Open larger view"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-3-preview.jpg" alt="Profile portrait of Lindsey DeWitt Prat in warm orange light, a second exposure of her profile trailing behind the first against deep teal. Photo by Jan Opdekamp." loading="lazy"></a></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-3-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.4&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-3.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 36&nbsp;MB</span></p>
     </li>
     <li class="photo">
-      <div class="frame"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-amber-preview.jpg" alt="Portrait of Lindsey DeWitt Prat looking into the camera against a warm amber background, wearing an olive turtleneck and striped jacket. Photo by Jan Opdekamp." loading="lazy"></div>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-amber-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.6&nbsp;MB</span></p>
-      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-amber.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 3&nbsp;MB</span></p>
+      <div class="frame"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-4-screen.jpg" target="_blank" rel="noopener" aria-label="Open larger view"><img src="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-4-preview.jpg" alt="Portrait of Lindsey DeWitt Prat looking into the camera against a warm amber background, wearing an olive turtleneck and striped jacket. Photo by Jan Opdekamp." loading="lazy"></a></div>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-4-screen.jpg" download>Screen resolution &darr;</a> <span class="size">JPEG, 0.6&nbsp;MB</span></p>
+      <p class="dl"><a href="/assets/media-kit/LindseyDeWittPrat-by-JanOpdekamp-4.jpg" download>Print resolution &darr;</a> <span class="size">JPEG, 3&nbsp;MB</span></p>
     </li>
     <li class="photo">
       <div class="frame linkout"><img src="/assets/media-kit/LindseyDeWittPrat-headshot-studio-preview.jpg" alt="" aria-hidden="true"><p>You can find a conventional studio headshot on the Bold Insight site.</p></div>
