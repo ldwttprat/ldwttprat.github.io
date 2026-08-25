@@ -48,9 +48,11 @@ h2.sect{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;
 .copy-btn{position:absolute;top:14px;right:14px;font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper);border:1px solid var(--line);padding:4px 10px;cursor:pointer}
 .copy-btn:hover{color:var(--accent);border-color:var(--accent)}
 /* photo grid */
-.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:36px 26px;list-style:none;margin:0 0 10px;padding:0}
+.photos{display:grid;grid-template-columns:repeat(5,1fr);gap:30px 20px;list-style:none;margin:0 0 10px;padding:0}
+@media (max-width:1000px){.photos{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.photos{grid-template-columns:repeat(2,1fr)}}
 .photo .frame{background:var(--wash);margin:0 0 12px}
-.photo .frame img{width:100%;display:block}
+.photo .frame img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
 .photo .dl{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-weight:600;font-size:.84rem;margin:0 0 4px}
 .photo .dl .size{font-weight:400;font-size:.76rem;color:var(--muted)}
 .photo .frame.linkout{position:relative;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
