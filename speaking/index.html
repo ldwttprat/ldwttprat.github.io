@@ -50,6 +50,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .gallery img{width:100%;border:1px solid var(--line)}
 .clip{margin:52px 0 52px auto;max-width:520px}
 .clip video{width:100%;display:block;border:1px solid var(--line);background:#000}
+.clip iframe{width:100%;aspect-ratio:16/9;display:block;border:1px solid var(--line);background:#000}
+.clips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;margin:52px 0}
+.clips .clip{margin:0;max-width:none}
+.clips .clip:first-child figcaption{text-align:left}
+.clip .yt{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line);background:#000;cursor:pointer}
+.clip .yt img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.clip .yt::after{content:"";position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M9 6.5v11l9-5.500z'/%3E%3C/svg%3E") center/34px no-repeat}
+@media (max-width:640px){.clips{grid-template-columns:1fr;margin:40px 0}}
 .clip figcaption{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-size:.84rem;color:var(--muted);margin-top:10px;text-align:right}
 @media (max-width:640px){.clip{margin:40px 0}.clip figcaption{text-align:left}}
 /* testimonial */
@@ -104,13 +112,21 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
     <p><strong>Organizers:</strong> bios and photographs for programs and press are on the <a href="/media-kit/">media kit page</a>.</p>
   </section>
 
-  <figure class="clip">
-    <video controls preload="metadata" playsinline poster="/assets/video/hwid-2026-poster.jpg">
-      <source src="/assets/video/hwid-2026-clip.mp4" type="video/mp4">
-      Your browser does not support embedded video.
-    </video>
-    <figcaption><a href="https://wg6.ifip-tc13.org/human-work-interaction-design-2026-hwid-2026/" target="_blank" rel="noopener">Human Work Interaction Design 2026</a>, University of West London.</figcaption>
-  </figure>
+  <div class="clips">
+    <figure class="clip">
+      <button class="yt" type="button" data-src="https://www.youtube-nocookie.com/embed/JMdjmnuLn_o?start=2706&amp;end=2761&amp;rel=0&amp;autoplay=1" aria-label="Play video: Lindsey DeWitt Prat at Futureproofing Anthropology, UCL">
+        <img src="/assets/video/ucl-2026-poster.jpg" alt="Lindsey speaking at a roundtable table beside two other panelists." loading="lazy">
+      </button>
+      <figcaption><a href="https://www.ucl.ac.uk/social-historical-sciences/anthropology/research/futureproofing-anthropology" target="_blank" rel="noopener">Futureproofing Anthropology</a>, University College London.</figcaption>
+    </figure>
+    <figure class="clip">
+      <video controls preload="metadata" playsinline poster="/assets/video/hwid-2026-poster.jpg">
+        <source src="/assets/video/hwid-2026-clip.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+      <figcaption><a href="https://wg6.ifip-tc13.org/human-work-interaction-design-2026-hwid-2026/" target="_blank" rel="noopener">Human Work Interaction Design 2026</a>, University of West London.</figcaption>
+    </figure>
+  </div>
 
   <section class="gallery" aria-label="Speaking photographs">
     <figure>
@@ -161,5 +177,8 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 
 
 <a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
+<script>
+document.querySelectorAll('.clip .yt').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src=b.dataset.src;f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; web-share';f.allowFullscreen=true;b.replaceWith(f);});});
+</script>
 </body>
 </html>
