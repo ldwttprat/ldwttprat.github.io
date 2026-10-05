@@ -47,7 +47,9 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 /* gallery */
 .gallery{columns:2;column-gap:26px;margin:52px 0}
 .gallery figure{margin:0 0 26px;break-inside:avoid}
-.gallery img{width:100%;border:1px solid var(--line)}
+.gallery img{width:100%;border:1px solid var(--line);display:block}
+.gallery figcaption,.hero figcaption{font-family:'Avenir Next',Avenir,'Helvetica Neue','Segoe UI',sans-serif;font-size:.84rem;color:var(--muted);margin-top:10px}
+.hero figcaption{max-width:1140px;margin:10px auto 0;padding:0 24px;text-align:right}
 .clip{margin:52px 0 52px auto;max-width:520px}
 .clip video{width:100%;display:block;border:1px solid var(--line);background:#000}
 .clip iframe{width:100%;aspect-ratio:16/9;display:block;border:1px solid var(--line);background:#000}
@@ -100,6 +102,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 
 <figure class="hero">
   <img src="/assets/img/spk-keynote-stage.jpg" alt="Lindsey delivering a keynote on a blue-lit conference stage, wearing a headset microphone and gesturing mid-sentence.">
+  <figcaption>UXinsight, Leiden, Netherlands, April 2025</figcaption>
 </figure>
 
 <main class="shell">
@@ -117,35 +120,41 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
       <button class="yt" type="button" data-src="https://www.youtube-nocookie.com/embed/JMdjmnuLn_o?start=2706&amp;end=2761&amp;rel=0&amp;autoplay=1" aria-label="Play video: Lindsey DeWitt Prat at Futureproofing Anthropology, UCL">
         <img src="/assets/video/ucl-2026-poster.jpg" alt="Lindsey speaking at a roundtable table beside two other panelists." loading="lazy">
       </button>
-      <figcaption><a href="https://www.ucl.ac.uk/social-historical-sciences/anthropology/research/futureproofing-anthropology" target="_blank" rel="noopener">Futureproofing Anthropology</a>, University College London.</figcaption>
+      <figcaption><a href="https://www.ucl.ac.uk/social-historical-sciences/anthropology/research/futureproofing-anthropology" target="_blank" rel="noopener">Futureproofing Anthropology</a>, University College London, June 2026</figcaption>
     </figure>
     <figure class="clip">
       <video controls preload="metadata" playsinline poster="/assets/video/hwid-2026-poster.jpg">
         <source src="/assets/video/hwid-2026-clip.mp4" type="video/mp4">
         Your browser does not support embedded video.
       </video>
-      <figcaption><a href="https://wg6.ifip-tc13.org/human-work-interaction-design-2026-hwid-2026/" target="_blank" rel="noopener">Human Work Interaction Design 2026</a>, University of West London.</figcaption>
+      <figcaption><a href="https://wg6.ifip-tc13.org/human-work-interaction-design-2026-hwid-2026/" target="_blank" rel="noopener">Human Work Interaction Design 2026</a>, University of West London, June 2026</figcaption>
     </figure>
   </div>
 
   <section class="gallery" aria-label="Speaking photographs">
     <figure>
       <img src="/assets/img/spk-panel-mic.jpg" alt="Lindsey seated on a panel, speaking into a handheld microphone, wearing a dark top with a floral scarf." loading="lazy">
+      <figcaption>Future of Being Human Symposium, Abu Dhabi, November 2025</figcaption>
     </figure>
     <figure>
       <img src="/assets/img/spk-slide-meaning.jpg" alt="Lindsey on a masterclass stage beside a large slide titled Two ways meaning gets lost, contrasting structure and culture." loading="lazy">
+      <figcaption>UXMC, Bangalore, October 2025</figcaption>
     </figure>
     <figure>
       <img src="/assets/img/spk-roundtable.jpg" alt="Lindsey in an olive shirt speaking into a handheld microphone at a roundtable, with flowers and other participants blurred behind." loading="lazy">
+      <figcaption>Future of Being Human Symposium, Abu Dhabi, November 2025</figcaption>
     </figure>
     <figure>
       <img src="/assets/img/spk-un-geneva.jpg" alt="Conference hall at the United Nations Office at Geneva during the AI for Developing Countries Forum, with a desk monitor showing Lindsey speaking behind a nameplate reading L. DeWitt Prat." loading="lazy">
+      <figcaption>AIFOD, United Nations Geneva, January 2025</figcaption>
     </figure>
     <figure>
       <img src="/assets/img/spk-studio-set.jpg" alt="View from a video control desk of Lindsey presenting at a lectern against a brick wall, surrounded by studio cameras and truss lighting." loading="lazy">
+      <figcaption>GUACfest keynote, Google, June 2025</figcaption>
     </figure>
     <figure>
       <img src="/assets/img/spk-llm-africa-talk.jpg" alt="Lindsey on stage in a black dress beneath a projected slide titled Ethnographic LLM Research in Africa." loading="lazy">
+      <figcaption>EPIC 2024</figcaption>
     </figure>
   </section>
 
